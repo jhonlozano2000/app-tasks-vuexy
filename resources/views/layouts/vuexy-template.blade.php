@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr">
+<html class="loading" lang="es" data-textdirection="ltr">
 <!-- BEGIN: Head-->
 
 <head>
@@ -10,33 +10,35 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Dashboard analytics - Vuexy - Bootstrap HTML admin template</title>
-    <link rel="apple-touch-icon" href="images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="images/ico/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+    <link rel="apple-touch-icon" href="{{ asset('') }}images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('') }}images/ico/favicon.ico">
+    <link href="{{ asset('') }}https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/charts/apexcharts.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/extensions/tether-theme-arrows.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/extensions/tether.min.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/extensions/shepherd-theme-default.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/vendors.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/charts/apexcharts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/extensions/tether-theme-arrows.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/extensions/tether.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendors/css/extensions/shepherd-theme-default.css') }}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="css/colors.css">
-    <link rel="stylesheet" type="text/css" href="css/components.css">
-    <link rel="stylesheet" type="text/css" href="css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="css/themes/semi-dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-extended.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/components.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/dark-layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/themes/semi-dark-layout.css') }}">
 
-    <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="css/pages/dashboard-analytics.css">
-    <link rel="stylesheet" type="text/css" href="css/pages/card-analytics.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins/tour/tour.css">
+{{--    <!-- BEGIN: Page CSS-->--}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/core/menu/menu-types/vertical-menu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/core/colors/palette-gradient.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/dashboard-analytics.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/card-analytics.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins/tour/tour.css') }}">
     <!-- END: Page CSS-->
 
 </head>
@@ -53,16 +55,16 @@
             <div class="navbar-collapse" id="navbar-mobile">
                 <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
+                        <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="{{ asset('') }}#"><i class="ficon feather icon-menu"></i></a></li>
                     </ul>
                     <ul class="nav navbar-nav bookmark-icons">
                         <!-- li.nav-item.mobile-menu.d-xl-none.mr-auto-->
                         <!--   a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')-->
                         <!--     i.ficon.feather.icon-menu-->
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-todos.html" data-toggle="tooltip" data-placement="top" title="Todo"><i class="ficon feather icon-check-square"></i></a></li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-chat.html" data-toggle="tooltip" data-placement="top" title="Chat"><i class="ficon feather icon-message-square"></i></a></li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html" data-toggle="tooltip" data-placement="top" title="Email"><i class="ficon feather icon-mail"></i></a></li>
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calender.html" data-toggle="tooltip" data-placement="top" title="Calendar"><i class="ficon feather icon-calendar"></i></a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ asset('') }}app-todos.html" data-toggle="tooltip" data-placement="top" title="Todo"><i class="ficon feather icon-check-square"></i></a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ asset('') }}app-chat.html" data-toggle="tooltip" data-placement="top" title="Chat"><i class="ficon feather icon-message-square"></i></a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ asset('') }}app-email.html" data-toggle="tooltip" data-placement="top" title="Email"><i class="ficon feather icon-mail"></i></a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ asset('') }}app-calender.html" data-toggle="tooltip" data-placement="top" title="Calendar"><i class="ficon feather icon-calendar"></i></a></li>
                     </ul>
                     <ul class="nav navbar-nav">
                         <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a>
@@ -80,8 +82,8 @@
                     </ul>
                 </div>
                 <ul class="nav navbar-nav float-right">
-                    <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></div>
+                    <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="{{ asset('') }}#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="{{ asset('') }}#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="{{ asset('') }}#" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="{{ asset('') }}#" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a><a class="dropdown-item" href="{{ asset('') }}#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></div>
                     </li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
                     <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
@@ -92,14 +94,14 @@
                             <ul class="search-list"></ul>
                         </div>
                     </li>
-                    <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                    <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="{{ asset('') }}#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
                         <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                             <li class="dropdown-menu-header">
                                 <div class="dropdown-header m-0 p-2">
                                     <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
                                 </div>
                             </li>
-                            <li class="scrollable-container media-list"><a class="d-flex justify-content-between" href="javascript:void(0)">
+                            <li class="scrollable-container media-list"><a class="d-flex justify-content-between" href="{{ asset('') }}javascript:void(0)">
                                     <div class="media d-flex align-items-start">
                                         <div class="media-left"><i class="feather icon-plus-square font-medium-5 primary"></i></div>
                                         <div class="media-body">
@@ -107,7 +109,7 @@
                                         </div><small>
                                             <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">9 hours ago</time></small>
                                     </div>
-                                </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                </a><a class="d-flex justify-content-between" href="{{ asset('') }}javascript:void(0)">
                                     <div class="media d-flex align-items-start">
                                         <div class="media-left"><i class="feather icon-download-cloud font-medium-5 success"></i></div>
                                         <div class="media-body">
@@ -115,7 +117,7 @@
                                         </div><small>
                                             <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">5 hour ago</time></small>
                                     </div>
-                                </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                </a><a class="d-flex justify-content-between" href="{{ asset('') }}javascript:void(0)">
                                     <div class="media d-flex align-items-start">
                                         <div class="media-left"><i class="feather icon-alert-triangle font-medium-5 danger"></i></div>
                                         <div class="media-body">
@@ -123,7 +125,7 @@
                                         </div><small>
                                             <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Today</time></small>
                                     </div>
-                                </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                </a><a class="d-flex justify-content-between" href="{{ asset('') }}javascript:void(0)">
                                     <div class="media d-flex align-items-start">
                                         <div class="media-left"><i class="feather icon-check-circle font-medium-5 info"></i></div>
                                         <div class="media-body">
@@ -131,7 +133,7 @@
                                         </div><small>
                                             <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last week</time></small>
                                     </div>
-                                </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                </a><a class="d-flex justify-content-between" href="{{ asset('') }}javascript:void(0)">
                                     <div class="media d-flex align-items-start">
                                         <div class="media-left"><i class="feather icon-file font-medium-5 warning"></i></div>
                                         <div class="media-body">
@@ -140,14 +142,14 @@
                                             <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last month</time></small>
                                     </div>
                                 </a></li>
-                            <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
+                            <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="{{ asset('') }}javascript:void(0)">Read all notifications</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                    <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="{{ asset('') }}#" data-toggle="dropdown">
                             <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="images/portrait/small/avatar-s-11.png" alt="avatar" height="40" width="40"></span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="page-user-profile.html"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="app-email.html"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="feather icon-message-square"></i> Chats</a>
-                            <div class="dropdown-divider"></div><a class="dropdown-item" href="auth-login.html"><i class="feather icon-power"></i> Logout</a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{ asset('') }}page-user-profile.html"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="{{ asset('') }}app-email.html"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="{{ asset('') }}app-todo.html"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="{{ asset('') }}app-chat.html"><i class="feather icon-message-square"></i> Chats</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="{{ asset('') }}auth-login.html"><i class="feather icon-power"></i> Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -162,7 +164,7 @@
 <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template-semi-dark/index.html">
+            <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ asset('') }}../../../html/ltr/vertical-menu-template-semi-dark/index.html">
                     <div class="brand-logo"></div>
                     <h2 class="brand-text mb-0">Vuexy</h2>
                 </a></li>
@@ -172,295 +174,295 @@
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item"><a href="index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2">2</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2">2</span></a>
                 <ul class="menu-content">
-                    <li class="active"><a href="dashboard-analytics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
+                    <li class="active"><a href="{{ asset('') }}dashboard-analytics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
                     </li>
-                    <li><a href="dashboard-ecommerce.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">eCommerce</span></a>
+                    <li><a href="{{ asset('') }}dashboard-ecommerce.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="eCommerce">eCommerce</span></a>
                     </li>
                 </ul>
             </li>
             <li class=" navigation-header"><span>Apps</span>
             </li>
-            <li class=" nav-item"><a href="app-email.html"><i class="feather icon-mail"></i><span class="menu-title" data-i18n="Email">Email</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}app-email.html"><i class="feather icon-mail"></i><span class="menu-title" data-i18n="Email">Email</span></a>
             </li>
-            <li class=" nav-item"><a href="app-chat.html"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Chat</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}app-chat.html"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Chat</span></a>
             </li>
-            <li class=" nav-item"><a href="app-todo.html"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Todo">Todo</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}app-todo.html"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Todo">Todo</span></a>
             </li>
-            <li class=" nav-item"><a href="app-calender.html"><i class="feather icon-calendar"></i><span class="menu-title" data-i18n="Calender">Calender</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}app-calender.html"><i class="feather icon-calendar"></i><span class="menu-title" data-i18n="Calender">Calender</span></a>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Ecommerce">Ecommerce</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-shopping-cart"></i><span class="menu-title" data-i18n="Ecommerce">Ecommerce</span></a>
                 <ul class="menu-content">
-                    <li><a href="app-ecommerce-shop.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Shop</span></a>
+                    <li><a href="{{ asset('') }}app-ecommerce-shop.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Shop">Shop</span></a>
                     </li>
-                    <li><a href="app-ecommerce-wishlist.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Wish List">Wish List</span></a>
+                    <li><a href="{{ asset('') }}app-ecommerce-wishlist.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Wish List">Wish List</span></a>
                     </li>
-                    <li><a href="app-ecommerce-checkout.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkout">Checkout</span></a>
+                    <li><a href="{{ asset('') }}app-ecommerce-checkout.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkout">Checkout</span></a>
                     </li>
                 </ul>
             </li>
             <li class=" navigation-header"><span>UI Elements</span>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Data List">Data List</span><span class="badge badge badge-primary badge-pill float-right mr-2">New</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Data List">Data List</span><span class="badge badge badge-primary badge-pill float-right mr-2">New</span></a>
                 <ul class="menu-content">
-                    <li><a href="data-list-view.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List View">List View</span></a>
+                    <li><a href="{{ asset('') }}data-list-view.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List View">List View</span></a>
                     </li>
-                    <li><a href="data-thumb-view.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Thumb View">Thumb View</span></a>
+                    <li><a href="{{ asset('') }}data-thumb-view.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Thumb View">Thumb View</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-layout"></i><span class="menu-title" data-i18n="Content">Content</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-layout"></i><span class="menu-title" data-i18n="Content">Content</span></a>
                 <ul class="menu-content">
-                    <li><a href="content-grid.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Grid">Grid</span></a>
+                    <li><a href="{{ asset('') }}content-grid.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Grid">Grid</span></a>
                     </li>
-                    <li><a href="content-typography.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Typography">Typography</span></a>
+                    <li><a href="{{ asset('') }}content-typography.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Typography">Typography</span></a>
                     </li>
-                    <li><a href="content-text-utilities.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Text Utilities">Text Utilities</span></a>
+                    <li><a href="{{ asset('') }}content-text-utilities.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Text Utilities">Text Utilities</span></a>
                     </li>
-                    <li><a href="content-syntax-highlighter.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Syntax Highlighter">Syntax Highlighter</span></a>
+                    <li><a href="{{ asset('') }}content-syntax-highlighter.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Syntax Highlighter">Syntax Highlighter</span></a>
                     </li>
-                    <li><a href="content-helper-classes.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Helper Classes">Helper Classes</span></a>
+                    <li><a href="{{ asset('') }}content-helper-classes.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Helper Classes">Helper Classes</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="colors.html"><i class="feather icon-droplet"></i><span class="menu-title" data-i18n="Colors">Colors</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}colors.html"><i class="feather icon-droplet"></i><span class="menu-title" data-i18n="Colors">Colors</span></a>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-eye"></i><span class="menu-title" data-i18n="Icons">Icons</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-eye"></i><span class="menu-title" data-i18n="Icons">Icons</span></a>
                 <ul class="menu-content">
-                    <li><a href="icons-feather.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Feather">Feather</span></a>
+                    <li><a href="{{ asset('') }}icons-feather.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Feather">Feather</span></a>
                     </li>
-                    <li><a href="icons-font-awesome.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Font Awesome">Font Awesome</span></a>
+                    <li><a href="{{ asset('') }}icons-font-awesome.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Font Awesome">Font Awesome</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-credit-card"></i><span class="menu-title" data-i18n="Card">Card</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-credit-card"></i><span class="menu-title" data-i18n="Card">Card</span></a>
                 <ul class="menu-content">
-                    <li><a href="card-basic.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Basic</span></a>
+                    <li><a href="{{ asset('') }}card-basic.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Basic</span></a>
                     </li>
-                    <li><a href="card-advance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Advance">Advance</span></a>
+                    <li><a href="{{ asset('') }}card-advance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Advance">Advance</span></a>
                     </li>
-                    <li><a href="card-statistics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Statistics">Statistics</span></a>
+                    <li><a href="{{ asset('') }}card-statistics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Statistics">Statistics</span></a>
                     </li>
-                    <li><a href="card-analytics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
+                    <li><a href="{{ asset('') }}card-analytics.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
                     </li>
-                    <li><a href="card-actions.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Card Actions</span></a>
+                    <li><a href="{{ asset('') }}card-actions.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Card Actions</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-briefcase"></i><span class="menu-title" data-i18n="Components">Components</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-briefcase"></i><span class="menu-title" data-i18n="Components">Components</span></a>
                 <ul class="menu-content">
-                    <li><a href="component-alerts.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Alerts">Alerts</span></a>
+                    <li><a href="{{ asset('') }}component-alerts.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Alerts">Alerts</span></a>
                     </li>
-                    <li><a href="component-buttons-basic.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Buttons">Buttons</span></a>
+                    <li><a href="{{ asset('') }}component-buttons-basic.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Buttons">Buttons</span></a>
                     </li>
-                    <li><a href="component-breadcrumbs.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Breadcrumbs">Breadcrumbs</span></a>
+                    <li><a href="{{ asset('') }}component-breadcrumbs.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Breadcrumbs">Breadcrumbs</span></a>
                     </li>
-                    <li><a href="component-carousel.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Carousel">Carousel</span></a>
+                    <li><a href="{{ asset('') }}component-carousel.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Carousel">Carousel</span></a>
                     </li>
-                    <li><a href="component-collapse.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Collapse">Collapse</span></a>
+                    <li><a href="{{ asset('') }}component-collapse.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Collapse">Collapse</span></a>
                     </li>
-                    <li><a href="component-dropdowns.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Dropdowns">Dropdowns</span></a>
+                    <li><a href="{{ asset('') }}component-dropdowns.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Dropdowns">Dropdowns</span></a>
                     </li>
-                    <li><a href="component-list-group.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List Group">List Group</span></a>
+                    <li><a href="{{ asset('') }}component-list-group.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List Group">List Group</span></a>
                     </li>
-                    <li><a href="component-modals.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Modals">Modals</span></a>
+                    <li><a href="{{ asset('') }}component-modals.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Modals">Modals</span></a>
                     </li>
-                    <li><a href="component-pagination.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Pagination">Pagination</span></a>
+                    <li><a href="{{ asset('') }}component-pagination.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Pagination">Pagination</span></a>
                     </li>
-                    <li><a href="component-navs-component.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Navs Component">Navs Component</span></a>
+                    <li><a href="{{ asset('') }}component-navs-component.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Navs Component">Navs Component</span></a>
                     </li>
-                    <li><a href="component-navbar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Navbar">Navbar</span></a>
+                    <li><a href="{{ asset('') }}component-navbar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Navbar">Navbar</span></a>
                     </li>
-                    <li><a href="component-tabs-component.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Tabs Component">Tabs Component</span></a>
+                    <li><a href="{{ asset('') }}component-tabs-component.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Tabs Component">Tabs Component</span></a>
                     </li>
-                    <li><a href="component-pills-component.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Pills Component">Pills Component</span></a>
+                    <li><a href="{{ asset('') }}component-pills-component.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Pills Component">Pills Component</span></a>
                     </li>
-                    <li><a href="component-tooltips.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Tooltips">Tooltips</span></a>
+                    <li><a href="{{ asset('') }}component-tooltips.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Tooltips">Tooltips</span></a>
                     </li>
-                    <li><a href="component-popovers.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Popovers">Popovers</span></a>
+                    <li><a href="{{ asset('') }}component-popovers.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Popovers">Popovers</span></a>
                     </li>
-                    <li><a href="component-badges.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Badges">Badges</span></a>
+                    <li><a href="{{ asset('') }}component-badges.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Badges">Badges</span></a>
                     </li>
-                    <li><a href="component-pill-badges.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Pill Badges">Pill Badges</span></a>
+                    <li><a href="{{ asset('') }}component-pill-badges.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Pill Badges">Pill Badges</span></a>
                     </li>
-                    <li><a href="component-progress.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Progress">Progress</span></a>
+                    <li><a href="{{ asset('') }}component-progress.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Progress">Progress</span></a>
                     </li>
-                    <li><a href="component-media-objects.html"><i class="feather icon-circle"></i><span class="menu-item">Media Objects</span></a>
+                    <li><a href="{{ asset('') }}component-media-objects.html"><i class="feather icon-circle"></i><span class="menu-item">Media Objects</span></a>
                     </li>
-                    <li><a href="component-spinner.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Spinner">Spinner</span></a>
+                    <li><a href="{{ asset('') }}component-spinner.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Spinner">Spinner</span></a>
                     </li>
-                    <li><a href="component-bs-toast.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Toasts">Toasts</span></a>
+                    <li><a href="{{ asset('') }}component-bs-toast.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Toasts">Toasts</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-box"></i><span class="menu-title" data-i18n="Extra Components">Extra Components</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-box"></i><span class="menu-title" data-i18n="Extra Components">Extra Components</span></a>
                 <ul class="menu-content">
-                    <li><a href="ex-component-avatar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Avatar">Avatar</span></a>
+                    <li><a href="{{ asset('') }}ex-component-avatar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Avatar">Avatar</span></a>
                     </li>
-                    <li><a href="ex-component-chips.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Chips">Chips</span></a>
+                    <li><a href="{{ asset('') }}ex-component-chips.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Chips">Chips</span></a>
                     </li>
-                    <li><a href="ex-component-divider.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Divider">Divider</span></a>
+                    <li><a href="{{ asset('') }}ex-component-divider.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Divider">Divider</span></a>
                     </li>
                 </ul>
             </li>
             <li class=" navigation-header"><span>Forms &amp; Tables</span>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-copy"></i><span class="menu-title" data-i18n="Form Elements">Form Elements</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-copy"></i><span class="menu-title" data-i18n="Form Elements">Form Elements</span></a>
                 <ul class="menu-content">
-                    <li><a href="form-select.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Select">Select</span></a>
+                    <li><a href="{{ asset('') }}form-select.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Select">Select</span></a>
                     </li>
-                    <li><a href="form-switch.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Switch">Switch</span></a>
+                    <li><a href="{{ asset('') }}form-switch.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Switch">Switch</span></a>
                     </li>
-                    <li><a href="form-checkbox.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkbox">Checkbox</span></a>
+                    <li><a href="{{ asset('') }}form-checkbox.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkbox">Checkbox</span></a>
                     </li>
-                    <li><a href="form-radio.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Radio</span></a>
+                    <li><a href="{{ asset('') }}form-radio.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Radio</span></a>
                     </li>
-                    <li><a href="form-inputs.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Input">Input</span></a>
+                    <li><a href="{{ asset('') }}form-inputs.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Input">Input</span></a>
                     </li>
-                    <li><a href="form-input-groups.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Input Groups">Input Groups</span></a>
+                    <li><a href="{{ asset('') }}form-input-groups.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Input Groups">Input Groups</span></a>
                     </li>
-                    <li><a href="form-number-input.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Number Input">Number Input</span></a>
+                    <li><a href="{{ asset('') }}form-number-input.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Number Input">Number Input</span></a>
                     </li>
-                    <li><a href="form-textarea.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Textarea">Textarea</span></a>
+                    <li><a href="{{ asset('') }}form-textarea.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Textarea">Textarea</span></a>
                     </li>
-                    <li><a href="form-date-time-picker.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Date &amp; Time Picker">Date &amp; Time Picker</span></a>
+                    <li><a href="{{ asset('') }}form-date-time-picker.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Date &amp; Time Picker">Date &amp; Time Picker</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="form-layout.html"><i class="feather icon-box"></i><span class="menu-title" data-i18n="Form Layout">Form Layout</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}form-layout.html"><i class="feather icon-box"></i><span class="menu-title" data-i18n="Form Layout">Form Layout</span></a>
             </li>
-            <li class=" nav-item"><a href="form-wizard.html"><i class="feather icon-package"></i><span class="menu-title" data-i18n="Form Wizard">Form Wizard</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}form-wizard.html"><i class="feather icon-package"></i><span class="menu-title" data-i18n="Form Wizard">Form Wizard</span></a>
             </li>
-            <li class=" nav-item"><a href="form-validation.html"><i class="feather icon-check-circle"></i><span class="menu-title" data-i18n="Form Validation">Form Validation</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}form-validation.html"><i class="feather icon-check-circle"></i><span class="menu-title" data-i18n="Form Validation">Form Validation</span></a>
             </li>
-            <li class=" nav-item"><a href="table.html"><i class="feather icon-server"></i><span class="menu-title" data-i18n="Table">Table</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}table.html"><i class="feather icon-server"></i><span class="menu-title" data-i18n="Table">Table</span></a>
             </li>
-            <li class=" nav-item"><a href="table-datatable.html"><i class="feather icon-grid"></i><span class="menu-title" data-i18n="Datatable">Datatable</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}table-datatable.html"><i class="feather icon-grid"></i><span class="menu-title" data-i18n="Datatable">Datatable</span></a>
             </li>
-            <li class=" nav-item"><a href="table-ag-grid.html"><i class="feather icon-grid"></i><span class="menu-title" data-i18n="ag-grid">agGrid Table</span><span class="badge badge badge-primary badge-pill float-right mr-2">New</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}table-ag-grid.html"><i class="feather icon-grid"></i><span class="menu-title" data-i18n="ag-grid">agGrid Table</span><span class="badge badge badge-primary badge-pill float-right mr-2">New</span></a>
             </li>
             <li class=" navigation-header"><span>pages</span>
             </li>
-            <li class=" nav-item"><a href="page-user-profile.html"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Profile">Profile</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}page-user-profile.html"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Profile">Profile</span></a>
             </li>
-            <li class=" nav-item"><a href="page-faq.html"><i class="feather icon-help-circle"></i><span class="menu-title" data-i18n="FAQ">FAQ</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}page-faq.html"><i class="feather icon-help-circle"></i><span class="menu-title" data-i18n="FAQ">FAQ</span></a>
             </li>
-            <li class=" nav-item"><a href="page-knowledge-base.html"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Knowledge Base">Knowledge Base</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}page-knowledge-base.html"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Knowledge Base">Knowledge Base</span></a>
             </li>
-            <li class=" nav-item"><a href="page-search.html"><i class="feather icon-search"></i><span class="menu-title" data-i18n="Search">Search</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}page-search.html"><i class="feather icon-search"></i><span class="menu-title" data-i18n="Search">Search</span></a>
             </li>
-            <li class=" nav-item"><a href="page-invoice.html"><i class="feather icon-file"></i><span class="menu-title" data-i18n="Invoice">Invoice</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}page-invoice.html"><i class="feather icon-file"></i><span class="menu-title" data-i18n="Invoice">Invoice</span></a>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Starter kit">Starter kit</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Starter kit">Starter kit</span></a>
                 <ul class="menu-content">
-                    <li><a href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-1-column.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="1 column">1 column</span></a>
+                    <li><a href="{{ asset('') }}../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-1-column.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="1 column">1 column</span></a>
                     </li>
-                    <li><a href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-2-columns.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="2 columns">2 columns</span></a>
+                    <li><a href="{{ asset('') }}../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-2-columns.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="2 columns">2 columns</span></a>
                     </li>
-                    <li><a href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed-navbar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Fixed navbar">Fixed navbar</span></a>
+                    <li><a href="{{ asset('') }}../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed-navbar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Fixed navbar">Fixed navbar</span></a>
                     </li>
-                    <li><a href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-floating-navbar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Floating navbar">Floating navbar</span></a>
+                    <li><a href="{{ asset('') }}../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-floating-navbar.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Floating navbar">Floating navbar</span></a>
                     </li>
-                    <li><a href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Fixed layout">Fixed layout</span></a>
+                    <li><a href="{{ asset('') }}../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-fixed.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Fixed layout">Fixed layout</span></a>
                     </li>
-                    <li><a href="../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-static.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Static layout">Static layout</span></a>
+                    <li><a href="{{ asset('') }}../../../starter-kit/ltr/vertical-menu-template-semi-dark/sk-layout-static.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Static layout">Static layout</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-unlock"></i><span class="menu-title" data-i18n="Authentication">Authentication</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-unlock"></i><span class="menu-title" data-i18n="Authentication">Authentication</span></a>
                 <ul class="menu-content">
-                    <li><a href="auth-login.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Login">Login</span></a>
+                    <li><a href="{{ asset('') }}auth-login.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Login">Login</span></a>
                     </li>
-                    <li><a href="auth-register.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Register">Register</span></a>
+                    <li><a href="{{ asset('') }}auth-register.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Register">Register</span></a>
                     </li>
-                    <li><a href="auth-forgot-password.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Forgot Password">Forgot Password</span></a>
+                    <li><a href="{{ asset('') }}auth-forgot-password.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Forgot Password">Forgot Password</span></a>
                     </li>
-                    <li><a href="auth-reset-password.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Reset Password">Reset Password</span></a>
+                    <li><a href="{{ asset('') }}auth-reset-password.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Reset Password">Reset Password</span></a>
                     </li>
-                    <li><a href="auth-lock-screen.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Lock Screen">Lock Screen</span></a>
+                    <li><a href="{{ asset('') }}auth-lock-screen.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Lock Screen">Lock Screen</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-file-text"></i><span class="menu-title" data-i18n="Miscellaneous">Miscellaneous</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-file-text"></i><span class="menu-title" data-i18n="Miscellaneous">Miscellaneous</span></a>
                 <ul class="menu-content">
-                    <li><a href="page-coming-soon.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Coming Soon">Coming Soon</span></a>
+                    <li><a href="{{ asset('') }}page-coming-soon.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Coming Soon">Coming Soon</span></a>
                     </li>
-                    <li><a href="#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Error">Error</span></a>
+                    <li><a href="{{ asset('') }}#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Error">Error</span></a>
                         <ul class="menu-content">
-                            <li><a href="error-404.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="404">404</span></a>
+                            <li><a href="{{ asset('') }}error-404.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="404">404</span></a>
                             </li>
-                            <li><a href="error-500.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="500">500</span></a>
+                            <li><a href="{{ asset('') }}error-500.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="500">500</span></a>
                             </li>
                         </ul>
                     </li>
-                    <li><a href="page-not-authorized.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Not Authorized">Not Authorized</span></a>
+                    <li><a href="{{ asset('') }}page-not-authorized.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Not Authorized">Not Authorized</span></a>
                     </li>
-                    <li><a href="page-maintenance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Maintenance">Maintenance</span></a>
+                    <li><a href="{{ asset('') }}page-maintenance.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Maintenance">Maintenance</span></a>
                     </li>
                 </ul>
             </li>
             <li class=" navigation-header"><span>Charts &amp; Maps</span>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-pie-chart"></i><span class="menu-title" data-i18n="Charts">Charts</span><span class="badge badge badge-pill badge-success float-right mr-2">3</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-pie-chart"></i><span class="menu-title" data-i18n="Charts">Charts</span><span class="badge badge badge-pill badge-success float-right mr-2">3</span></a>
                 <ul class="menu-content">
-                    <li><a href="chart-apex.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Apex">Apex</span></a>
+                    <li><a href="{{ asset('') }}chart-apex.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Apex">Apex</span></a>
                     </li>
-                    <li><a href="chart-chartjs.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Chartjs">Chartjs</span></a>
+                    <li><a href="{{ asset('') }}chart-chartjs.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Chartjs">Chartjs</span></a>
                     </li>
-                    <li><a href="chart-echarts.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Echarts">Echarts</span></a>
+                    <li><a href="{{ asset('') }}chart-echarts.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Echarts">Echarts</span></a>
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="maps-google.html"><i class="feather icon-map"></i><span class="menu-title" data-i18n="Google Maps">Google Maps</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}maps-google.html"><i class="feather icon-map"></i><span class="menu-title" data-i18n="Google Maps">Google Maps</span></a>
             </li>
             <li class=" navigation-header"><span>Extensions</span>
             </li>
-            <li class=" nav-item"><a href="ext-component-sweet-alerts.html"><i class="feather icon-alert-circle"></i><span class="menu-title" data-i18n="Sweet Alert">Sweet Alert</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-sweet-alerts.html"><i class="feather icon-alert-circle"></i><span class="menu-title" data-i18n="Sweet Alert">Sweet Alert</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-toastr.html"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Toastr">Toastr</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-toastr.html"><i class="feather icon-zap"></i><span class="menu-title" data-i18n="Toastr">Toastr</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-noui-slider.html"><i class="feather icon-sliders"></i><span class="menu-title" data-i18n="NoUi Slider">NoUi Slider</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-noui-slider.html"><i class="feather icon-sliders"></i><span class="menu-title" data-i18n="NoUi Slider">NoUi Slider</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-file-uploader.html"><i class="feather icon-upload-cloud"></i><span class="menu-title" data-i18n="File Uploader">File Uploader</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-file-uploader.html"><i class="feather icon-upload-cloud"></i><span class="menu-title" data-i18n="File Uploader">File Uploader</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-quill-editor.html"><i class="feather icon-edit"></i><span class="menu-title" data-i18n="Quill Editor">Quill Editor</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-quill-editor.html"><i class="feather icon-edit"></i><span class="menu-title" data-i18n="Quill Editor">Quill Editor</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-drag-drop.html"><i class="feather icon-droplet"></i><span class="menu-title" data-i18n="Drag &amp; Drop">Drag &amp; Drop</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-drag-drop.html"><i class="feather icon-droplet"></i><span class="menu-title" data-i18n="Drag &amp; Drop">Drag &amp; Drop</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-tour.html"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Tour">Tour</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-tour.html"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Tour">Tour</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-clipboard.html"><i class="feather icon-copy"></i><span class="menu-title" data-i18n="Clipboard">Clipboard</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-clipboard.html"><i class="feather icon-copy"></i><span class="menu-title" data-i18n="Clipboard">Clipboard</span></a>
             </li>
-            <li class=" nav-item"><a href=" ext-component-plyr.html"><i class="feather icon-film"></i><span class="menu-title" data-i18n="Media player">Media player</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }} ext-component-plyr.html"><i class="feather icon-film"></i><span class="menu-title" data-i18n="Media player">Media player</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-context-menu.html"><i class="feather icon-more-horizontal"></i><span class="menu-title" data-i18n="Context Menu">Context Menu</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-context-menu.html"><i class="feather icon-more-horizontal"></i><span class="menu-title" data-i18n="Context Menu">Context Menu</span></a>
             </li>
-            <li class=" nav-item"><a href="ext-component-i18n.html"><i class="feather icon-globe"></i><span class="menu-title" data-i18n="l18n">l18n</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}ext-component-i18n.html"><i class="feather icon-globe"></i><span class="menu-title" data-i18n="l18n">l18n</span></a>
             </li>
             <li class=" navigation-header"><span>Others</span>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-menu"></i><span class="menu-title" data-i18n="Menu Levels">Menu Levels</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}#"><i class="feather icon-menu"></i><span class="menu-title" data-i18n="Menu Levels">Menu Levels</span></a>
                 <ul class="menu-content">
-                    <li><a href="#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Second Level">Second Level</span></a>
+                    <li><a href="{{ asset('') }}#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Second Level">Second Level</span></a>
                     </li>
-                    <li><a href="#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Second Level">Second Level</span></a>
+                    <li><a href="{{ asset('') }}#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Second Level">Second Level</span></a>
                         <ul class="menu-content">
-                            <li><a href="#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Third Level">Third Level</span></a>
+                            <li><a href="{{ asset('') }}#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Third Level">Third Level</span></a>
                             </li>
-                            <li><a href="#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Third Level">Third Level</span></a>
+                            <li><a href="{{ asset('') }}#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Third Level">Third Level</span></a>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li class="disabled nav-item"><a href="#"><i class="feather icon-eye-off"></i><span class="menu-title" data-i18n="Disabled Menu">Disabled Menu</span></a>
+            <li class="disabled nav-item"><a href="{{ asset('') }}#"><i class="feather icon-eye-off"></i><span class="menu-title" data-i18n="Disabled Menu">Disabled Menu</span></a>
             </li>
             <li class=" navigation-header"><span>Support</span>
             </li>
-            <li class=" nav-item"><a href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation"><i class="feather icon-folder"></i><span class="menu-title" data-i18n="Documentation">Documentation</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation"><i class="feather icon-folder"></i><span class="menu-title" data-i18n="Documentation">Documentation</span></a>
             </li>
-            <li class=" nav-item"><a href="https://pixinvent.ticksy.com/"><i class="feather icon-life-buoy"></i><span class="menu-title" data-i18n="Raise Support">Raise Support</span></a>
+            <li class=" nav-item"><a href="{{ asset('') }}https://pixinvent.ticksy.com/"><i class="feather icon-life-buoy"></i><span class="menu-title" data-i18n="Raise Support">Raise Support</span></a>
             </li>
         </ul>
     </div>
@@ -547,7 +549,7 @@
                                                     <span>vs last 7 days</span>
                                                 </h5>
                                             </div>
-                                            <a href="#" class="btn btn-primary shadow">View Details <i class="feather icon-chevrons-right"></i></a>
+                                            <a href="{{ asset('') }}#" class="btn btn-primary shadow">View Details <i class="feather icon-chevrons-right"></i></a>
                                         </div>
                                         <div class="col-lg-6 col-12 d-flex justify-content-between flex-column text-right order-lg-2 order-1">
                                             <div class="dropdown chart-dropdown">
@@ -555,9 +557,9 @@
                                                     Last 7 Days
                                                 </button>
                                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownItem5">
-                                                    <a class="dropdown-item" href="#">Last 28 Days</a>
-                                                    <a class="dropdown-item" href="#">Last Month</a>
-                                                    <a class="dropdown-item" href="#">Last Year</a>
+                                                    <a class="dropdown-item" href="{{ asset('') }}#">Last 28 Days</a>
+                                                    <a class="dropdown-item" href="{{ asset('') }}#">Last Month</a>
+                                                    <a class="dropdown-item" href="{{ asset('') }}#">Last Year</a>
                                                 </div>
                                             </div>
                                             <div id="avg-session-chart"></div>
@@ -603,9 +605,9 @@
                                         Last 7 Days
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownItem4">
-                                        <a class="dropdown-item" href="#">Last 28 Days</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Last Year</a>
+                                        <a class="dropdown-item" href="{{ asset('') }}#">Last 28 Days</a>
+                                        <a class="dropdown-item" href="{{ asset('') }}#">Last Month</a>
+                                        <a class="dropdown-item" href="{{ asset('') }}#">Last Year</a>
                                     </div>
                                 </div>
                             </div>
@@ -649,9 +651,9 @@
                                         Last 7 Days
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownItem2">
-                                        <a class="dropdown-item" href="#">Last 28 Days</a>
-                                        <a class="dropdown-item" href="#">Last Month</a>
-                                        <a class="dropdown-item" href="#">Last Year</a>
+                                        <a class="dropdown-item" href="{{ asset('') }}#">Last 28 Days</a>
+                                        <a class="dropdown-item" href="{{ asset('') }}#">Last Month</a>
+                                        <a class="dropdown-item" href="{{ asset('') }}#">Last Year</a>
                                     </div>
                                 </div>
                             </div>
@@ -920,7 +922,7 @@
 
 <!-- BEGIN: Footer-->
 <footer class="footer footer-static footer-light">
-    <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2019<a class="text-bold-800 grey darken-2" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent,</a>All rights Reserved</span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i class="feather icon-heart pink"></i></span>
+    <p class="clearfix blue-grey lighten-2 mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2019<a class="text-bold-800 grey darken-2" href="{{ asset('') }}https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent,</a>All rights Reserved</span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i class="feather icon-heart pink"></i></span>
         <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="feather icon-arrow-up"></i></button>
     </p>
 </footer>
@@ -928,23 +930,23 @@
 
 
 <!-- BEGIN: Vendor JS-->
-<script src="vendors/js/vendors.min.js"></script>
+<script src="{{ asset('vendors/js/vendors.min.js') }}"></script>
 <!-- BEGIN Vendor JS-->
 
 <!-- BEGIN: Page Vendor JS-->
-<script src="vendors/js/charts/apexcharts.min.js"></script>
-<script src="vendors/js/extensions/tether.min.js"></script>
-<script src="vendors/js/extensions/shepherd.min.js"></script>
+<script src="{{ asset('vendors/js/charts/apexcharts.min.js') }}"></script>
+<script src="{{ asset('vendors/js/extensions/tether.min.js') }}"></script>
+<script src="{{ asset('vendors/js/extensions/shepherd.min.js') }}"></script>
 <!-- END: Page Vendor JS-->
 
 <!-- BEGIN: Theme JS-->
-<script src="js/core/app-menu.js"></script>
-<script src="js/core/app.js"></script>
-<script src="js/scripts/components.js"></script>
+<script src="{{ asset('js/core/app-menu.js') }}"></script>
+<script src="{{ asset('js/core/app.js') }}"></script>
+<script src="{{ asset('js/scripts/components.js') }}"></script>
 <!-- END: Theme JS-->
 
 <!-- BEGIN: Page JS-->
-<script src="js/scripts/pages/dashboard-analytics.js"></script>
+<script src="{{ asset('js/scripts/pages/dashboard-analytics.js') }}"></script>
 <!-- END: Page JS-->
 
 </body>
